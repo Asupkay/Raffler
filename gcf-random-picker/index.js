@@ -6,9 +6,13 @@
  */
 exports.randomGET = function randomGET (req, res) {
     let emails = req.body;
-    res.send('Hello World!');
+    let randomEmail = getRandomEmail(emails);
+    res.send(randomEmail);
 };
 
 let getRandomEmail = (emails) => {
-    //let emailArray = emails.split('\n');
+    let emailArray = emails.split('\n');
+    let randomIndex = Math.floor(Math.random() * emails.length);
+
+    return emails[randomIndex];
 }

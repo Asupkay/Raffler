@@ -1,0 +1,25 @@
+{
+  "name": "raffler",
+  "version": "1.0.0",
+  "description": "Express server that serves up a raffler interface",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://asupkay@github.com/Asupkay/raffler.git"
+  },
+  "author": "Alex Supkay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Asupkay/raffler/issues"
+  },
+  "homepage": "https://github.com/Asupkay/raffler#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0"
+  }
+}

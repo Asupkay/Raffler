@@ -1,5 +1,5 @@
 <article>
-    <form action="https://us-central1-raffler-185618.cloudfunctions.net/randomGET" method="post" id="raffle-input-form">
+    <form action="/raffler" method="post" id="raffle-input-form">
         <label for="emails">
             Emails Here (one per line):
         </label>
@@ -8,6 +8,6 @@
     </form>
     <div>
         <h3>Raffle Winner:</h3>
-        <p id="raffle-winner-text"></p>
+        <p id="raffle-winner-text">{{raffleWinner}}</p>
     </div>
 </article>

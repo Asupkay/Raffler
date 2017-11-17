@@ -1,7 +1,9 @@
-const path = require("path");
+const rafflerRoutes = require("./raffler");
 
 const constructorMethod = app => {
-    app.use("*", (req, res) => {
+    app.use("/raffler", rafflerRoutes);
+
+    app.use("/", (req, res) => {
         res.render("raffle/form");
     });
 };

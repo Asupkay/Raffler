@@ -4,7 +4,7 @@ const static = express.static(__dirname +'/public');
 const bodyParser = require("body-parser");
 const configRoutes = require("./routes");
 
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 const exphbs = require('express-handlebars');
 
 app.use("/public", static);

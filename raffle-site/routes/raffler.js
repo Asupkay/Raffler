@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 router.post("/", (req, res) => {
-    res.render("raffle/form", {raffleWinner: "Success"});
+    var winner = encodeURIComponent('Success');
+    res.redirect('/?winner=' + winner + '&emails=' + req.body.emails);
 });
 
 module.exports = router;

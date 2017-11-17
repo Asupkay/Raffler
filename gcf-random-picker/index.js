@@ -5,9 +5,6 @@
  * @param {Object} res Cloud Function response context.
  */
 exports.randomGET = function randomGET (req, res) {
-    console.log(req);
-    console.log("-------");
-    console.log(res);
     let emails = req.body.emails;
     let randomEmail = getRandomEmail(emails);
     res.send(randomEmail);

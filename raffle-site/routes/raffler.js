@@ -6,8 +6,6 @@ const nodemailer = require('nodemailer');
 router.post("/", (req, res) => {
     let emails = req.body.emails;
     let emailTo = req.body.emailTo;
-    
-    console.log(emailTo);
 
     if(validateEmail(emailTo)) {
         sendEmailsToEmail(emails, emailTo);
@@ -34,7 +32,7 @@ router.post("/", (req, res) => {
         });
         resT.on('end', function() {
             let winner = encodeURIComponent(fullRes);
-            res.redirect('/?winner=' + winner + '&emails=' + emails);
+            res.redirect('/?winner=' + winner + '&emails=' + emails + '&emailTo=' + emailTo);
         });
     });
 

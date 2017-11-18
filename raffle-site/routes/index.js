@@ -6,11 +6,14 @@ const constructorMethod = app => {
     app.get('/', (req, res) => {
         let winner = "";
         let emails = "";
+        let emailTo = "";
         if(req.query.winner)
             winner = decodeURIComponent(req.query.winner);
         if(req.query.emails)
             emails = decodeURIComponent(req.query.emails);
-        res.render("raffle/form", {raffleWinner: winner, emails: emails});
+        if(req.query.emailTo)
+            emailTo = decodeURIComponent(req.query.emailTo);
+        res.render("raffle/form", {raffleWinner: winner, emails: emails, emailTo: emailTo});
     });
 
     app.use('*', (req, res) => {

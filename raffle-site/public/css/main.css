@@ -15,12 +15,16 @@ header > h1 {
 }
 
 article {
-    margin: 2% 10%;
+    margin: 0% 10%;
 }
 
 .form-group > textarea {
     resize: vertical;
     overflow: auto;
+}
+
+.form-group > label {
+    margin-top: 2%;
 }
 
 #raffle-input-form {

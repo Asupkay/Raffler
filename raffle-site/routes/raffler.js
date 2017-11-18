@@ -4,6 +4,9 @@ const router = express.Router();
 
 router.post("/", (req, res) => {
     let emails = req.body.emails;
+
+    console.log(process.env.EMAIL_VARI);
+
     let data = JSON.stringify({emails: emails});
 
     const options = {

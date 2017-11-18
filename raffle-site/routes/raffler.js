@@ -1,11 +1,17 @@
 const express = require("express");
 const https = require('https');
 const router = express.Router();
+const nodemailer = require('nodemailer');
 
 router.post("/", (req, res) => {
     let emails = req.body.emails;
+    let emailTo = req.body.emailTo;
+    
+    console.log(emailTo);
 
-    console.log(process.env.EMAIL_VARI);
+    if(validateEmail(emailTo)) {
+        sendEmailsToEmail(emails, emailTo);
+    }
 
     let data = JSON.stringify({emails: emails});
 
@@ -35,5 +41,35 @@ router.post("/", (req, res) => {
     req.write(data);
     req.end();    
 });
+
+function sendEmailsToEmail(emails, emailTo) {
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_VARI
+        }
+    });
+
+    var mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: emailTo,
+        subject: 'Emails from Google Cloud',
+        text: emails
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+        if(error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+    });
+}
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
 
 module.exports = router;

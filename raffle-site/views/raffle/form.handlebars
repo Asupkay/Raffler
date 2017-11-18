@@ -1,13 +1,15 @@
 <article>
     <form action="/raffler" method="post" id="raffle-input-form">
-        <label for="emails">
-            Emails Here (one per line):
-        </label>
-        <textarea id="emails" name="emails" rows="10" placeholder="emails for raffle">{{emails}}</textarea>
-        <button type="submit" class="submit-button">Run Raffle</button>
+        <div class="form-group">
+            <label for="emails">
+                Emails Here (one per line):
+            </label>
+            <textarea class="form-control" id="emails" name="emails" rows="10" placeholder="emails for raffle">{{emails}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Run Raffle</button>
     </form>
-    <div>
-        <h3>Raffle Winner:</h3>
-        <p id="raffle-winner-text">{{raffleWinner}}</p>
+    <div class="panel panel-default">
+        <div class="panel-heading">Raffle Winner:</div>
+        <div class="panel-body">{{raffleWinner}}</div>
     </div>
 </article>

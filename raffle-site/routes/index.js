@@ -7,6 +7,8 @@ const constructorMethod = app => {
         let winner = "";
         let emails = "";
         let emailTo = "";
+
+        //If the query has different options render it onto the page
         if(req.query.winner)
             winner = decodeURIComponent(req.query.winner);
         if(req.query.emails)

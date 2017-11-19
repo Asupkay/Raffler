@@ -6,20 +6,20 @@ Description: This is a node express server utilizing handlebars that is designed
 
 1. First there are two files missing from this repository for security issues (regards to email passwords) they are as follows:
     * app.yaml - For configuration for the server here is what it needs to look like:
-        `
-        env: flex
-        runtime: nodejs
-        env_variables:
-        EMAIL_VARI: 'Your sender email password here'
-        EMAIL_USER: 'Your sender password here'
-        skip_files:
-        - .env
-        `
+`
+env: flex
+runtime: nodejs
+env_variables:
+EMAIL_VARI: 'Your sender email password here'
+EMAIL_USER: 'Your sender password here'
+skip_files:
+- .env
+`
     * .env - For configuration for the localhost here is what it needs to look like:
-        `
-        EMAIL_VARI="Your sender email password here"
-        EMAIL_USER="Your sender password here"
-        `
+`
+EMAIL_VARI="Your sender email password here"
+EMAIL_USER="Your sender password here"
+`
 
 2. Once those two files are set up run `npm install`
 3. Run `npm start` to start up a local server

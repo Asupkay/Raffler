@@ -25,3 +25,4 @@ Description: This is a node express server utilizing handlebars that is designed
 3. Run `npm start` to start up a local server
 4. Navigate to `localhost:3000`
 5. You can then work with the raffler by putting emails one per line in the text area and an email in the email area and press run raffle
+6. If you install gcloud sdk you can deploy this app using `gcloud app deploy`

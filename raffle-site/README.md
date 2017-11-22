@@ -1,6 +1,6 @@
 # The Raffler
 
-**Description:** This is a Node.js Express server utilizing Handlebars that is designed to run on Google Cloud Platform's App Engine. The raffler displays a form where users can put emails into a text area; one email per line. There is also an input for an email that if filled will send the text area to the email. When the button is hit the server sends the email (if applicable) and then formulates an HTTPS POST request to the Google serverless function in the other folder (deployed version). Once the winner is returned Handlebars updates the page and displays the winner.
+**Description:** This is a Node.js Express server utilizing Handlebars that is designed to run on Google Cloud Platform's App Engine. The raffler displays a form where users can put emails into a text area; one email per line. There is also an input for an email that if filled will send the text area to the email. When the button is hit the server sends the email (if applicable) and then formulates an HTTPS POST request to the Google Cloud Function in the other folder (deployed version). Once the winner is returned Handlebars updates the page and displays the winner.
 
 ## Start up
 

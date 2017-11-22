@@ -5,8 +5,8 @@
 ## The Folders
 ### raffle-site
     
-This is the nodejs express server and the files for the website. There is another README in there with more information
+This is the Node.js Express server and the files for the website. There is another README in there with more information.
 
 ### gcp-random-picker
 
-This is the serverless function that is hosted on Google Serverless Functions there is another README in there with more information
+This is the serverless function that is hosted on Google Serverless Functions there is another README in there with more information.

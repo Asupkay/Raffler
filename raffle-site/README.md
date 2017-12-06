@@ -10,8 +10,8 @@
     env: flex
     runtime: nodejs
     env_variables:
-    EMAIL_VARI: 'Your sender email password here'
-    EMAIL_USER: 'Your sender password here'
+        EMAIL_VARI: 'Your sender email password here'
+        EMAIL_USER: 'Your sender password here'
     skip_files:
     - .env
     ```
@@ -25,4 +25,4 @@
 3. Run `npm start` to start up a local server
 4. Navigate to `localhost:3000`
 5. You can then work with the raffler by putting emails one per line in the text area and an email in the email area and press run raffle
-6. If you install gcloud sdk you can deploy this app using `gcloud app deploy`
+6. If you install gcloud sdk you can deploy this app using `gcloud app deploy` or 'npm run deploy'
